@@ -12,8 +12,8 @@ public class P09_HerOkuAppQuery extends BaseUrlHerOkuApp {
 
             https://restful-booker.herokuapp.com/booking endpointine
             gerekli Query parametrelerini yazarak
-                “firstname” degeri “Susan”
-                ve “lastname” degeri “Jones” olan
+                “firstname” degeri “Josh”
+                ve “lastname” degeri “Allen” olan
             rezervasyon oldugunu test edecek bir GET request gonderdigimizde,
             donen response’un
                 status code’unun 200 oldugunu
@@ -21,7 +21,7 @@ public class P09_HerOkuAppQuery extends BaseUrlHerOkuApp {
          */
     @Test
     public void test(){
-        specRestfull.pathParam("pp1","booking").queryParams("firstname","Susan","lastname","Jones");
+        specRestfull.pathParam("pp1","booking").queryParams("firstname","Josh","lastname","Allen");
 
         Response response=given().spec(specRestfull).when().get("/{pp1}");
 
